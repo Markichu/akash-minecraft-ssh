@@ -14,8 +14,8 @@ services:
           - global: true 
     env:
       - SSH=TRUE
-      - USER=admin
-      - PASS=pass
+      - SSH_USER=user
+      - SSH_PASS=pass
       - EULA=TRUE
       - MEMORY=3G
       - "MOTD=§4§lAkash§8§lCraft§r: §2§lMinecraft§r on §4§lAkash!"
