@@ -1,6 +1,6 @@
 This repository outlines how to launch your own highly optimised Minecraft server using the Akash decentralized cloud (DeCloud).
 
-This repo will use our custom made Docker image that is a fork of the popular [itzg/docker-minecraft-server](https://github.com/itzg/docker-minecraft-server) but with added SSH support.
+This repo will use our [custom made Docker image](https://github.com/Markichu/docker-minecraft-server-ssh) that is a fork of the popular [itzg/docker-minecraft-server](https://github.com/itzg/docker-minecraft-server) but with added SSH support.
 
 ![minecraft-server](https://user-images.githubusercontent.com/31204091/135333948-a56c84c2-b462-491f-a5c3-c0c666fe3a14.png)
 
