@@ -1,0 +1,60 @@
+---
+version: "2.0"
+
+services:
+  minecraft:
+    image: markichu/minecraft-server-ssh
+    expose:
+      - port: 25565
+        proto: tcp
+        to:
+          - global: true
+      - port: 22
+        to:
+          - global: true 
+    env:
+      - SSH=TRUE
+      - USER=admin
+      - PASS=pass
+      - EULA=TRUE
+      - MEMORY=3G
+      - "MOTD=§4§lAkash§8§lCraft§r: §2§lMinecraft§r on §4§lAkash!"
+      - MAX_PLAYERS=10
+      - TYPE=AIRPLANE
+      - VERSION=LATEST
+      - OPS=Notch,Dinnerbone
+      - SPAWN_PROTECTION=0
+      - VIEW_DISTANCE=6
+      - ENABLE_AUTOPAUSE=TRUE
+      - AUTOPAUSE_TIMEOUT_EST=300
+      - AUTOPAUSE_TIMEOUT_INIT=300
+      - MAX_TICK_TIME=-1
+      - USE_AIKAR_FLAGS=TRUE
+
+profiles:
+  compute:
+    minecraft:
+      resources:
+        cpu:
+          units: 1.5
+        memory:
+          size: 4Gi
+        storage:
+          size: 6Gi
+  placement:
+    westcoast:
+      attributes:
+        host: akash
+      signedBy:
+        anyOf:
+          - "akash1365yvmc4s7awdyj3n2sav7xfx76adc6dnmlx63"
+      pricing:
+        minecraft: 
+          denom: uakt
+          amount: 1000
+
+deployment:
+  minecraft:
+    westcoast:
+      profile: minecraft
+      count: 1
