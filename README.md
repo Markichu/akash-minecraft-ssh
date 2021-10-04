@@ -4,6 +4,10 @@ This repo will use our [custom made Docker image](https://github.com/Markichu/do
 
 ![minecraft-server](https://user-images.githubusercontent.com/31204091/135333948-a56c84c2-b462-491f-a5c3-c0c666fe3a14.png)
 
+Join our testing Minecraft server! It is running the recommeded deploy.yaml, come and see the performance with your own eyes.
+
+    cluster.provider-2.prod.ewr1.akash.pub:32366
+
 ## Example Deploy.yaml
 
 For our example, we have created an ultra-optimised deploy.yaml that can be modified to suit your needs. Below we will outline all the environment variables that we used to make this a performance beast.
